@@ -20,5 +20,29 @@ public class Account {
 		this.balance = balance;
 		transactions = 0;
 	}
+	public int getBalance() {
+		return this.balance;
+	}
+	public int getId() {
+		return this.id;
+	}
+	public int getTransactions() {
+		return this.transactions;
+	}
+	
+	/*Make a transaction*/
+	public synchronized void deposit(int amount) {
+		this.balance+= amount;
+		this.transactions++;
+	}
+	public synchronized void withdraw(int amount) {
+		this.balance-= amount;
+		this.transactions++;
+	}
+	/*Override toString*/
+	@Override
+	public String toString() {
+		return "AccId:" + this.id + " Balance:" + this.balance + " Transaction Amount:" + this.transactions;
+	}
 	
 }
