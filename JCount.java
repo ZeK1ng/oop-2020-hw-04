@@ -13,6 +13,7 @@ public class JCount extends JPanel {
 	private static final int COUNTER_NUM = 4;
 	private int maxCount = (int) 1e6;
 	private Worker wk;
+	
 	public JCount() {
 		// Set the JCount to use Box layout
 		setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
